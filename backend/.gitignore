@@ -7,7 +7,7 @@
 
 # mongo_uri database
 
-/.env
+.env
 
 # testing
 /coverage
