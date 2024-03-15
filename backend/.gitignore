@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# mongo_uri database
+
+/.env
+
 # testing
 /coverage
 

@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
+import dotenv from "dotenv";
 
 const connectDB = async () => {
     try {
-        const mongoURI = 'mongodb+srv://sajalsksk1jan:qyYi9KcPmNFnFrXA@cluster0.eqqnbob.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+        const mongoURI = process.env.MONGO_URI ;
         await mongoose.connect(mongoURI);
         console.log('Connected to MongoDB Atlas');
     } catch (err) {
