@@ -6,21 +6,17 @@ import cors from 'cors';
 const app = express();
 const PORT = 8000;
 
-// Connect to MongoDB
 connectDB();
 
-// Middleware
 app.use(express.json());
 app.use(cors()); 
 
-// Routes
 app.use('/upload', uploadRoutes);
 
 app.get("/",(req,res)=>{
     res.send("Postman is working in Excel backend");
   });
 
-// Start server
 app.listen(PORT, () => {
     console.log(`Server is running on port`, PORT);
 });
