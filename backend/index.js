@@ -6,10 +6,16 @@ import cors from 'cors';
 const app = express();
 const PORT = 8000;
 
+const corsOptions = {
+  origin: "https://klimb-frontend.vercel.app",
+  method:["POST","GET"],
+  credentials: true,
+};
+
 connectDB();
 
 app.use(express.json());
-app.use(cors()); 
+app.use(cors(corsOptions)); 
 
 app.use('/upload', uploadRoutes);
 
