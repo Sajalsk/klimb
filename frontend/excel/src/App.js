@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
-
 function App() {
+
   const [message, setMessage] = useState('');
 
   const handleFileUpload = async (event) => {
@@ -30,7 +29,8 @@ function App() {
         if (paraElement) {
           paraElement.innerHTML = 'Your records will be processed shortly.';
         }
-      }, 1000); // Display the message for 2 seconds
+      }, 1000); 
+
     } catch (error) {
       console.error('Error:', error);
       setMessage('An error occurred. Please try again.');
@@ -38,16 +38,15 @@ function App() {
   };
 
   return (
+
     <div className="App" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
       <h1>Candidate Record Upload</h1>
-      <label htmlFor="file-upload" className="file-upload-label">
-      
-   
-      </label>
+      {/* <label htmlFor="file-upload" className="file-upload-label">Add files </label> */}
       <input type="file" id="file-upload" className="file-upload" onChange={handleFileUpload} />
       <p style={{ color: 'red', textAlign: 'center' }}>{message}</p>
       <p className='para' style={{ color: 'blue', textAlign: 'center' }}>Add files to store in database</p>
     </div>
+
   );
 }
 

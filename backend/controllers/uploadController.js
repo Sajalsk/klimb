@@ -8,12 +8,14 @@ const uploadCandidates = async (req, res) => {
     }
 
     try {
+        
         const workbook = new Excel.Workbook();
         await workbook.xlsx.readFile(req.file.path);
         const worksheet = workbook.getWorksheet(1);
 
         const promises = [];
         worksheet.eachRow(async (row, rowNumber) => {
+
             if (rowNumber > 1) {
                 const candidateData = {
                     name: row.getCell(1).value,
