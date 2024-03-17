@@ -19,8 +19,7 @@ cd backend
 
 npm install
 
-
-
+Script to start
 nodemon index.js
 
 ## Frontend Setup
@@ -30,4 +29,15 @@ Navigate to the frontend folder:
 cd frontend/excel
 npm install
 npm start
+
+## Database Setup
+
+Mongo_uri of mine has been inserted;
+Please change it accordingly under db.js file under backend folder.
+
+
+## Functionality of the project 
+
+Simply add the excel file and wait for one to see the data in use mongodb databse.
+
 
