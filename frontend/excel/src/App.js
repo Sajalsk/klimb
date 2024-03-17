@@ -17,9 +17,10 @@ function App() {
 
     try {
       // eslint-disable-next-line 
-      const response = await axios.post('https://klimb-backend.vercel.app/upload', formData, {
+      const response = await axios.post('http://localhost:8000/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
+         
         }
       });
      
